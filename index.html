@@ -8,16 +8,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
-            --primary: CE1126;
-            --accent: BLUE-500;
-            --light: FFFFFF;
-            --dark: 000000;
-            --light-gray: GRAY-500;
-            --yellow: YELLOW-600;
+            --primary: #CE1126;         /* Main brand red */
+            --accent: #3B82F6;          /* Primary blue accent */
+            --light: #FFFFFF;           /* White */
+            --dark: #000000;            /* Black */
+            --light-gray: #6B7280;      /* Secondary text gray */
+            --yellow: #F59E0B;          /* Highlight yellow */
+            --success: #10B981;         /* Success green */
+            --warning: #F97316;         /* Warning orange */
             --font-primary: 'Montserrat', sans-serif;
+            
+            /* Additional color variables for consistency */
+            --primary-dark: #A00D1F;
+            --accent-light: #93C5FD;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-700: #374151;
+            --gray-900: #111827;
         }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="font-montserrat">
     <!-- Header -->
@@ -98,10 +109,9 @@
             </div>
         </div>
     </section>
-
     <!-- Benefits Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
+    <section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-primary relative inline-block pb-2">¿Por Qué Elegirnos?</h2>
                 <div class="w-20 h-1 bg-accent mx-auto mt-3"></div>
@@ -196,7 +206,7 @@
                 </div>
             </div>
             <div class="flex flex-col md:flex-row justify-center gap-4 mt-12 relative z-10">
-<a href="https://www.facebook.com/miramontesinsurance" target="_blank" class="bg-white hover:bg-transparent hover:text-white border-2 border-white text-accent font-semibold py-3 px-6 rounded-full uppercase transition-all">
+<a href="https://www.facebook.com/miramontesinsurance" target="_blank" class="bg-blue-500 hover:bg-transparent hover:text-white border-2 border-white text-accent font-semibold py-3 px-6 rounded-full uppercase transition-all">
                     <i class="fab fa-facebook-f mr-2"></i> Visita Facebook
                 </a>
                 <a href="https://wa.me/15408777842" target="_blank" class="bg-green-500 hover:bg-transparent hover:text-green-500 border-2 border-green-500 text-white font-semibold py-3 px-6 rounded-full uppercase transition-all">
@@ -206,15 +216,15 @@
         </div>
     </section>
     <!-- Contact Form Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
+    <section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4 max-w-4xl">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-primary relative inline-block pb-2">Déjanos un Mensaje</h2>
                 <div class="w-20 h-1 bg-accent mx-auto mt-3"></div>
                 <p class="mt-4 text-gray-600">Te contactaremos en menos de 24 horas</p>
             </div>
-            <form id="contact-form" class="space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form id="contact-form" class="space-y-6" onsubmit="sendEmail(event)">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo *</label>
                         <input type="text" id="name" name="name" required 
@@ -238,16 +248,15 @@
                 </div>
                 <div class="flex justify-center">
                     <button type="submit" 
-                        class="bg-accent hover:bg-yellow-300 text-black font-bold py-3 px-8 rounded-full uppercase transition-colors duration-300">
+                        class="bg-red-600 hover:bg-yellow-300 text-black font-bold py-3 px-8 rounded-full uppercase transition-colors duration-300">
                         Enviar Mensaje
                     </button>
                 </div>
             </form>
         </div>
     </section>
-
     <!-- Contact Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-gray-100">
 <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-primary relative inline-block pb-2">Contáctanos</h2>
@@ -289,10 +298,9 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
-    <footer class="bg-dark text-white py-12">
-        <div class="container mx-auto px-4">
+    <footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-10">
                 <div>
                     <h3 class="text-xl font-bold relative pb-2 mb-4">Miramontes Insurance</h3>
@@ -347,9 +355,9 @@
                 &copy; 2023 Miramontes Insurance. Todos los derechos reservados.
             </div>
         </div>
-    </footer>
+</footer>
+<script src="script.js"></script>
 <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
 </body>
 </html>
-
 
