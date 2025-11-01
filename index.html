@@ -27,9 +27,45 @@
             --gray-700: #374151;
             --gray-900: #111827;
         }
+        
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/mgvppjpy",
+    title: "Como le podemos ayudar?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Correo Electronico:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Mensaje:",
+        name: "message",
+        placeholder: "Quiero una cotizacion, mi nombre y direccion es...",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
 <body class="font-montserrat">
     <!-- Header -->
     <header class="bg-primary fixed w-full top-0 z-50 shadow-md">
@@ -58,7 +94,7 @@
         <div class="absolute inset-0 bg-blue-800 opacity-40 z-0"></div>
         <div class="container mx-auto relative z-10">
 <h2 class="text-4xl md:text-5xl font-bold uppercase mb-5">Seguro de Auto para la Comunidad Hispana</h2>
-            <p class="text-xl max-w-2xl mx-auto mb-8 text-gray-800 italic">Protegiendo tu vehículo y a tu familia con cobertura confiable y precios accesibles! Trabajamos con pasaporte o cedula de pais de origen. Disponible en Virginia y West Virginia.</p>
+            <p class="text-xl max-w-2xl mx-auto mb-8 text-gray-800 italic">Protegiendo tu vehículo y a tu familia con cobertura confiable y precios accesibles! Trabajamos con pasaporte o cedula de pais de origen.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4 mt-8">
                 <a href="https://www.facebook.com/miramontesinsurance" target="_blank" class="bg-blue-500 hover:bg-transparent hover:text-blue-500 border-2 border-gray-900 text-white font-semibold py-3 px-6 rounded-full uppercase transition-all">
                     <i class="fab fa-facebook-f mr-2"></i> Facebook
@@ -215,46 +251,6 @@
             </div>
         </div>
     </section>
-    <!-- Contact Form Section -->
-    <section class="py-16 bg-gray-50">
-<div class="container mx-auto px-4 max-w-4xl">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-primary relative inline-block pb-2">Déjanos un Mensaje</h2>
-                <div class="w-20 h-1 bg-accent mx-auto mt-3"></div>
-                <p class="mt-4 text-gray-600">Te contactaremos en menos de 24 horas</p>
-            </div>
-            <form id="contact-form" class="space-y-6" onsubmit="sendEmail(event)">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo *</label>
-                        <input type="text" id="name" name="name" required 
-                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
-                    </div>
-                    <div>
-                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Teléfono *</label>
-                        <input type="tel" id="phone" name="phone" required 
-                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
-                    </div>
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" 
-                        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
-                </div>
-                <div>
-                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensaje *</label>
-                    <textarea id="message" name="message" rows="4" required 
-                        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
-                </div>
-                <div class="flex justify-center">
-                    <button type="submit" 
-                        class="bg-red-600 hover:bg-yellow-300 text-black font-bold py-3 px-8 rounded-full uppercase transition-colors duration-300">
-                        Enviar Mensaje
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
     <!-- Contact Section -->
     <section class="py-16 bg-gray-100">
 <div class="container mx-auto px-4">
@@ -356,9 +352,6 @@
             </div>
         </div>
 </footer>
-<script src="script.js"></script>
-<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
 </body>
 </html>
-
 
