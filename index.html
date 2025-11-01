@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miramontes Insurance - Seguros de Autos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #0039A6;
+            --accent: #CE1126;
+            --light: #FFFFFF;
+            --dark: #333333;
+            --light-gray: #F5F5F5;
+            --yellow: #FFD700;
+            --font-primary: 'Montserrat', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--accent);
+            color: var(--light);
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent);
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--accent);
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            border: 2px solid #25D366;
+        }
+        
+        .btn-whatsapp:hover {
+            background: transparent;
+            color: #25D366;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--primary);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+            color: var(--yellow);
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--light);
+            font-weight: 400;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--light);
+            transition: color 0.3s;
+        }
+        
+        .contact-link i {
+            font-size: 20px;
+        }
+        
+        .contact-link:hover {
+            color: var(--yellow);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,57,166,0.85), rgba(0,57,166,0.9)), url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80') center/cover no-repeat;
+            padding: 180px 0 100px;
+            color: var(--light);
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        /* Services */
+        .services {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 50px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* Benefits */
+        .benefits {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .benefit {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .benefit-icon {
+            background: var(--primary);
+            color: var(--light);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(rgba(206,17,38,0.9), rgba(206,17,38,0.85)), url('https://images.unsplash.com/photo-1561212024-cb9d7340f2b3?q=80') center/cover;
+            padding: 80px 0;
+            color: var(--light);
+            text-align: center;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .client {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--light-gray);
+            padding: 80px 0;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .contact-text {
+            flex: 1;
+        }
+        
+        .contact-text h2 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .info-item i {
+            color: var(--primary);
+            font-size: 24px;
+        }
+        
+        .contact-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .contact-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .social-contact {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--light);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            margin-bottom: 20px;
+            position: relative;
+            font-size: 1.2rem;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .footer-links a {
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--yellow);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 900px) {
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero {
+                padding: 150px 0 60px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-link span {
+                display: none;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>MIRAMONTES <span>INSURANCE</span></h1>
+            </div>
+            <div class="contact-links">
+                <a href="https://www.facebook.com/miramontesinsurance" target="_blank" class="contact-link">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://wa.me/15408777842" target="_blank" class="contact-link">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Seguro de Auto para la Comunidad Hispana</h2>
+            <p>Protegiendo tu vehículo y a tu familia con cobertura confiable y precios accesibles</p>
+            <div class="hero-buttons">
+                <a href="https://www.facebook.com/miramontesinsurance" target="_blank" class="btn">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://wa.me/15408777842" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp: 540-877-7842
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Coberturas diseñadas para protegerte en cada viaje</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Seguro de Auto</h3>
+                    <p>Cobertura comprensiva y de responsabilidad civil para cualquier vehículo</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3>Seguro de Motocicleta</h3>
+                    <p>Protección para motocicletas y scooters con opciones personalizadas</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-pickup"></i>
+                    </div>
+                    <h3>Seguro de Camioneta</h3>
+                    <p>Protección especial para camionetas de trabajo y uso personal</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Seguro de Vivienda</h3>
+                    <p>Cobertura para tu hogar que se adapta a tus necesidades específicas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Por Qué Elegirnos?</h2>
+                <p>Beneficios que nos diferencian</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Atención Personalizada</h3>
+                        <p>Te atendemos en español por expertos que entienden tus necesidades</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Precios Competitivos</h3>
+                        <p>Cobertura de calidad a precios que se ajustan a tu presupuesto</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Protección Completa</h3>
+                        <p>Seguridad para tu vehículo, tu familia y tu patrimonio</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Trámites Rápidos</h3>
+                        <p>Cotiza, compra y reclama en minutos con nuestro proceso ágil</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Sin Complicaciones</h3>
+                        <p>Documentación sencilla y trámites sin burocracia innecesaria</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Soporte Continuo</h3>
+                        <p>Estamos disponibles cuando nos necesites, 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lo Que Dicen Nuestros Clientes</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Finalmente encontré una aseguradora que me entiende y me explica todo en español. Miramontes me ayudó a proteger mi familia sin gastar demás."
+                    </div>
+                    <div class="client">— Carlos M.</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Gracias a Miramontes por solucionar mi problema con la cobertura de manera rápida. Excelente servicio por WhatsApp en mi idioma."
+                    </div>
+                    <div class="client">— Sofía R.</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Mi agente fue muy paciente explicándome todas las opciones. Ahora tengo la tranquilidad de saber que mi familia está protegida."
+                    </div>
+                    <div class="client">— Juan P.</div>
+                </div>
+            </div>
+            <div class="social-contact">
+                <a href="https://www.facebook.com/miramontesinsurance" target="_blank" class="btn">
+                    <i class="fab fa-facebook-f"></i> Visita Facebook
+                </a>
+                <a href="https://wa.me/15408777842" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Contacto WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contáctanos</h2>
+                <p>Estamos aquí para ayudarte</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-text">
+                    <h3>Obtén tu cotización hoy mismo</h3>
+                    <p>Conéctate con nosotros mediante WhatsApp para recibir atención inmediata en español, o síguenos en Facebook para recibir promociones y consejos sobre seguros.</p>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/15408777842" target="_blank">540-877-7842</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fab fa-facebook"></i>
+                            <div>
+                                <h4>Facebook</h4>
+                                <a href="https://www.facebook.com/miramontesinsurance" target="_blank">facebook.com/miramontesinsurance</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horario de Atención</h4>
+                                <p>Lunes a Domingo: 11am - 6pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-image">
+                    <img src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?q=80" alt="Customer Service">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Miramontes Insurance</h3>
+                    <p>Protegiendo a la comunidad hispana con cobertura confiable y asequible.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/miramontesinsurance" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/15408777842" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Servicios</h3>
+                    <div class="footer-links">
+                        <a href="#">Seguro de Auto</a>
+                        <a href="#">Seguro de Motocicleta</a>
+                        <a href="#">Seguro de Camioneta</a>
+                        <a href="#">Seguro de Vivienda</a>
+                        <a href="#">Seguro Comercial</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <div class="footer-links">
+                        <a href="#">Inicio</a>
+                        <a href="#">Servicios</a>
+                        <a href="#">Sobre Nosotros</a>
+                        <a href="#">Preguntas Frecuentes</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <div class="footer-links">
+                        <a href="https://wa.me/15408777842" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp: 540-877-7842</a>
+                        <a href="tel:5408777842"><i class="fas fa-phone"></i> 540-877-7842</a>
+                        <a href="https://www.facebook.com/miramontesinsurance" target="_blank"><i class="fab fa-facebook"></i> facebook.com/miramontesinsurance</a>
+                        <a href="mailto:info@miramontesinsurance.com"><i class="fas fa-envelope"></i> info@miramontesinsurance.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Miramontes Insurance. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
