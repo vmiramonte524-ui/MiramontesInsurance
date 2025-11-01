@@ -39,7 +39,7 @@
   /* customize formbutton below*/     
   formbutton("create", {
     action: "https://formspree.io/f/mgvppjpy",
-    title: "Como le podemos ayudar?",
+    title: "Necesitas una cotizacion?",
     fields: [
       { 
         type: "email", 
@@ -50,9 +50,26 @@
       },
       {
         type: "textarea",
-        label: "Mensaje:",
+        label: "Nombre:",
         name: "message",
-        placeholder: "Quiero una cotizacion, mi nombre y direccion es...",
+        placeholder: "Su nombre completo (Nombre, Apellido(s))",
+      },{
+        type: "textarea",
+        label: "VIN#:",
+        name: "message",
+        placeholder: "El VIN de su vehiculo (s)",
+      },
+        {
+        type: "textarea",
+        label: "Direccion:",
+        name: "message",
+        placeholder: "Su dirrection completa (ex. 123 Main St., Winchester, VA, 22601)",
+      },
+        {
+        type: "textarea",
+        label: "Cobertura:",
+        name: "message",
+        placeholder: "Ocupas Full Coverage o Liability?",
       },
       { type: "submit" }      
     ],
@@ -68,14 +85,14 @@
 </script>
 <body class="font-montserrat">
     <!-- Header -->
-    <header class="bg-blue-800 fixed w-full top-0 z-50 shadow-md">
+    <header class="bg-blue-100 fixed w-full top-0 z-50 shadow-md">
         <div class="container mx-auto px-5 py-2 flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <img src="https://huggingface.co/spaces/Vmiramonte524/miramontes-shieldmasters/resolve/main/images/266261814_110868608107223_6240746914367713820_n.png" 
                      alt="Miramontes Insurance Logo" 
                      class="h-16 w-auto">
                 <h1 class="text-xl md:text-2xl font-bold text-yellow-400">MIRAMONTES INSURANCE<br>
-                   <span class="text-grey-800 font-normal text-sm md:text-base">SEGURO DE AUTO PARA TODOS</span></h1>
+                   <span class="text-red-800 font-normal text-sm md:text-base">SEGURO DE AUTO PARA TODOS</span></h1>
             </div>
 <div class="flex gap-5 items-center">
                 <a href="https://www.facebook.com/miramontesinsurance" target="_blank" class="text-white hover:text-blue-500 transition-colors">
@@ -354,6 +371,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
