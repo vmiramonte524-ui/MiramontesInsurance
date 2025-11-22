@@ -401,27 +401,25 @@
         </div>
     </div>
 </section>
-    <!-- Contact Section -->
- <!-- Premium Google Map + Contact Section -->
-<main class="container mx-auto px-4 py-20">
-  <div class="max-w-3xl mx-auto text-center mb-14">
-    <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+  <!-- Compact Premium Google Map + Contact Section -->
+<main class="container mx-auto px-4 py-14">
+  <div class="max-w-2xl mx-auto text-center mb-10">
+    <h1 class="text-3xl font-extrabold text-gray-900 mb-3">
       Nuestra Oficina
     </h1>
-    <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto">
-      Visítenos para obtener soluciones de seguros personalizadas. 
-      Estamos aquí para ayudarle a proteger lo que más le importa.
+    <p class="text-gray-600 text-base leading-relaxed">
+      Su solución rápida y confiable para seguros. Visítenos o contáctenos por teléfono, WhatsApp o correo electrónico.
     </p>
   </div>
 
   <div
-    class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200
-           transition-all duration-500 
-           hover:shadow-3xl hover:-translate-y-2 hover:scale-[1.015]
-           transform-gpu">
-    
-    <!-- Map -->
-    <div class="w-full h-[380px] md:h-[460px] relative">
+    class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200
+           transition-all duration-400 
+           hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.01]
+           transform-gpu max-w-4xl mx-auto">
+
+    <!-- More compact map height -->
+    <div class="w-full h-[260px] md:h-[300px] relative">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.565603720149!2d-78.18068032419642!3d39.16186077166885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b5ef4f8bd188b3%3A0xe9a53147bb61abb5!2sMiramontes%20Insurance%20LLC!5e0!3m2!1sen!2sus!4v1762091038946!5m2!1sen!2sus"
         allowfullscreen=""
@@ -431,47 +429,74 @@
       ></iframe>
     </div>
 
-    <!-- Contact Info -->
-    <div class="p-10 md:p-12 bg-gradient-to-b from-white to-gray-50">
-      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
-        Miramontes Insurance
+    <!-- Overview + Details -->
+    <div class="p-8 bg-gradient-to-b from-white to-gray-50">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+        Miramontes Insurance – Información de Contacto
       </h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
-        
+      <!-- More compact grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+
         <!-- Address -->
-        <div class="flex items-start">
-          <i data-feather="map-pin" class="text-blue-600 mr-3 mt-1"></i>
-          <p class="text-gray-700 text-lg leading-snug">
-            124 Weems Ln<br>Winchester, VA 22601
+        <div class="flex items-start space-x-3">
+          <i data-feather="map-pin" class="text-blue-600 mt-1"></i>
+          <p class="text-gray-700 text-sm leading-snug">
+            <strong class="text-gray-900">Dirección:</strong><br>
+            124 Weems Ln<br>
+            Winchester, VA 22601<br>
+            <a href="https://maps.google.com/?q=124+Weems+Ln+Winchester+VA" 
+               target="_blank" 
+               class="text-blue-600 hover:underline text-sm">
+               Cómo llegar →
+            </a>
           </p>
         </div>
 
-        <!-- Phone -->
-        <div class="flex items-start">
-          <i data-feather="phone" class="text-blue-600 mr-3 mt-1"></i>
-          <p class="text-gray-700 text-lg leading-snug">
-            (540) 877-7842
+        <!-- Phone + WhatsApp -->
+        <div class="flex items-start space-x-3">
+          <i data-feather="phone" class="text-blue-600 mt-1"></i>
+          <p class="text-gray-700 text-sm leading-snug">
+            <strong class="text-gray-900">Teléfono:</strong><br>
+            (540) 877-7842<br>
+            <a href="https://wa.me/15408777842" 
+               target="_blank" 
+               class="text-green-600 hover:underline text-sm">
+               WhatsApp Disponible →
+            </a>
+          </p>
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-start space-x-3">
+          <i data-feather="mail" class="text-blue-600 mt-1"></i>
+          <p class="text-gray-700 text-sm leading-snug">
+            <strong class="text-gray-900">Correo Electrónico:</strong><br>
+            <a href="mailto:miramontesinsurance@gmail.com" 
+               class="text-blue-600 hover:underline">
+               miramontesinsurance@gmail.com
+            </a>
           </p>
         </div>
 
         <!-- Hours -->
-        <div class="flex items-start">
-          <i data-feather="clock" class="text-blue-600 mr-3 mt-1"></i>
-          <p class="text-gray-700 text-lg leading-snug">
-            Lunes - Sábado:<br>11:00 AM - 6:00 PM
+        <div class="flex items-start space-x-3">
+          <i data-feather="clock" class="text-blue-600 mt-1"></i>
+          <p class="text-gray-700 text-sm leading-snug">
+            <strong class="text-gray-900">Horario:</strong><br>
+            Lunes – Sábado: 11:00 AM – 6:00 PM<br>
+            Domingo: Cerrado
           </p>
         </div>
+
       </div>
 
-      <!-- Gold Accent Divider -->
-      <div class="mt-10 mx-auto w-24 h-1 bg-yellow-400 rounded-full"></div>
+      <!-- Accent Divider -->
+      <div class="mt-8 mx-auto w-20 h-1 bg-yellow-400 rounded-full"></div>
     </div>
   </div>
 </main>
-
   <!-- Google Business Profile Link -->
-
  <a href='http://www.freevisitorcounters.com'>Visitors</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=eeb882acddb199d5bb7766894758371b8d8d5a92'></script>
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1433919/t/11"></script>
   <p style="font-size: 1.1rem;">
@@ -581,6 +606,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
