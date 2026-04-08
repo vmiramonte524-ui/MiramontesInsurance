@@ -5,21 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miramontes Insurance - Seguros de Autos Sin Licencia</title>
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Enhanced Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #CE1126;         /* Main brand red */
-            --accent: #3B82F6;          /* Primary blue accent */
-            --light: #FFFFFF;           /* White */
-            --dark: #000000;            /* Black */
-            --light-gray: #6B7280;      /* Secondary text gray */
-            --yellow: #F59E0B;          /* Highlight yellow */
-            --success: #10B981;         /* Success green */
-            --warning: #F97316;         /* Warning orange */
+            --primary: #CE1126;
+            --accent: #3B82F6;
+            --light: #FFFFFF;
+            --dark: #000000;
+            --light-gray: #6B7280;
+            --yellow: #F59E0B;
+            --success: #10B981;
+            --warning: #F97316;
+
+            /* Fonts */
             --font-primary: 'Montserrat', sans-serif;
-            
-            /* Additional color variables for consistency */
+            --font-secondary: 'Inter', sans-serif;
+
+            /* Extended palette */
             --primary-dark: #A00D1F;
             --accent-light: #93C5FD;
             --gray-100: #F3F4F6;
@@ -28,10 +39,27 @@
             --gray-700: #374151;
             --gray-900: #111827;
         }
-        
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        /* Global font smoothing for sharper text */
+        html {
+            font-family: var(--font-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Optional: Use Inter for body text for better readability */
+        body {
+            font-family: var(--font-secondary);
+        }
+
+        /* Use Montserrat for headings for stronger branding */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-primary);
+            font-weight: 700;
+        }
+    </style>
 </head>
+
 <!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
 <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
 <script>
