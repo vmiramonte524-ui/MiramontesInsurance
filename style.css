@@ -15,3 +15,9 @@
         margin-top: 0.75rem;
     }
 }
+body {
+    padding-top: 0.5rem; /* small gap above header */
+}
+body {
+    padding-bottom: 0.5rem; /* small gap below header */
+}
