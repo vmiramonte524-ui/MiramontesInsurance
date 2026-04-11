@@ -1,6 +1,11 @@
 /* GLOBAL FIX — removes the empty white space on the right */
 html, body {
     overflow-x: hidden;
+    
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
 }
 
 /* MOBILE FIXES */
