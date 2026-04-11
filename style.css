@@ -6,6 +6,16 @@
     }
 }
 
+@media (max-width: 640px) {
+  .header-title-block {
+    margin-bottom: 1.25rem; /* 20px of breathing room */
+  }
+
+  .header-social-buttons {
+    margin-top: 0.75rem; /* 12px spacing above buttons */
+  }
+}
+
 body {
     padding: 0;
     margin: 0;
