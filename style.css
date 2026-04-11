@@ -10,7 +10,9 @@ html, body {
 
 /* MOBILE FIXES */
 @media (max-width: 640px) {
-
+    .hero-subtitle {
+        white-space: nowrap;
+    }
     /* Reduce hero top + bottom padding */
     section.relative {
         padding-top: 2rem !important;
