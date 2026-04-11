@@ -1,9 +1,8 @@
-/* MOBILE HEADER FIX */
 @media (max-width: 640px) {
     header {
-        padding-top: 1rem !important;   /* small top gap */
-        padding-bottom: 1rem !important; /* small bottom gap */
-        margin-top: 0 !important;       /* do NOT add margin to fixed header */
+        padding-top: 0.75rem !important;   /* small top gap */
+        padding-bottom: 0.75rem !important; /* small bottom gap */
+        margin-top: 0 !important;          /* NEVER use margin on fixed header */
     }
 
     header h1,
