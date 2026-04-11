@@ -1,23 +1,18 @@
 @media (max-width: 640px) {
-    header {
-        padding-top: 0.75rem !important;   /* small top gap */
-        padding-bottom: 0.75rem !important; /* small bottom gap */
-        margin-top: 0 !important;          /* NEVER use margin on fixed header */
+
+    /* Reduce hero top + bottom padding */
+    section.relative {
+        padding-top: 2rem !important;     /* was 10rem */
+        padding-bottom: 1rem !important;  /* was 5rem */
     }
 
-    header h1,
-    header h2,
-    header p {
-        margin-bottom: 0.75rem;
+    /* Tighten hero text spacing */
+    section.relative p {
+        margin-bottom: 0.5rem !important;
     }
 
+    /* Reduce space under social buttons */
     .social-buttons {
-        margin-top: 0.75rem;
+        margin-bottom: 0.5rem !important;
     }
-}
-body {
-    padding-top: 0.5rem; /* small gap above header */
-}
-body {
-    padding-bottom: 0.5rem; /* small gap below header */
 }
