@@ -1,3 +1,9 @@
+/* GLOBAL FIX — removes the empty white space on the right */
+html, body {
+    overflow-x: hidden;
+}
+
+/* MOBILE FIXES */
 @media (max-width: 640px) {
 
     /* Reduce hero top + bottom padding */
@@ -11,8 +17,13 @@
     section.relative p {
         margin-bottom: 0.5rem !important;
     }
-    html, body {
-  overflow-x: hidden;
-}
 
+    /* Prevent long words (like FR-44 documentación) from overflowing */
+    .service-box,
+    .services-grid div,
+    .services-grid p,
+    .services-grid h3 {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
 }
