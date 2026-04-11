@@ -11,4 +11,8 @@
     section.relative p {
         margin-bottom: 0.5rem !important;
     }
+    html, body {
+  overflow-x: hidden;
+}
+
 }
